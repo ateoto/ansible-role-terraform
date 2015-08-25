@@ -14,8 +14,18 @@ Example Playbook
 ```yaml
     - hosts: servers
       roles:
-         - { role: ateoto.terraform, terraform_version: 0.6.3}
+         - { role: ateoto.terraform }
 ```
+
+To override the version to install:
+
+```yaml
+    - hosts: servers
+      roles:
+         - { role: ateoto.terraform, terraform_version: 0.6.2 }
+```
+
+Retention of older versions is not under our control, nor is it'
 
 License
 -------
