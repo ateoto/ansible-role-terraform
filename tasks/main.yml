@@ -1,0 +1,14 @@
+---
+
+- name: which terraform?
+  ignore_errors: true
+  command: which terraform
+  register: terraform_found
+
+- name: which terraform!
+  shell: terraform -version | grep 'Terraform v' | sed -r 's/\w+ \w//'
+  register: current_terraform_version
+  when: terraform_found|success
+
+- include: install.yml
+  when: terraform_found|failed or current_terraform_version.stdout | version_compare(terraform_version, '<')

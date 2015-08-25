@@ -1,0 +1,21 @@
+---
+
+dependencies: []
+
+galaxy_info:
+  author: Matthew McCants
+  description: Installs Hashicorp's Terraform on Ubuntu LTS or Debian Stable
+  company: "Modus Create, Inc."
+  license: MIT
+  min_ansible_version: 1.6
+  categories:
+  - system
+  platforms:
+  - name: Ubuntu
+    versions:
+    - precise
+    - trusty
+  - name: Debian
+    versions:
+    - wheezy
+    - jessie
