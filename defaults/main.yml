@@ -1,2 +1,3 @@
 ---
 # defaults file for ansible-role-terraform
+- terraform_base_url: 'https://releases.hashicorp.com/terraform/'
