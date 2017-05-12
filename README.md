@@ -6,7 +6,7 @@ Installs and configures Hashicorp's Terraform tool. We use this role to install 
 Role Variables
 --------------
 
-You can specify a version, default is `0.6.14` by overriding `terraform_version`.
+You can specify a version, default is `0.9.5` by overriding `terraform_version`.
 
 Example Playbook
 ----------------
@@ -22,10 +22,8 @@ To override the version to install:
 ```yaml
     - hosts: servers
       roles:
-         - { role: ateoto.terraform, terraform_version: 0.6.12 }
+         - { role: ateoto.terraform, terraform_version: 0.9.5 }
 ```
-
-Retention of older versions is not under our control, nor is it'
 
 License
 -------
