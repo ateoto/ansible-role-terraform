@@ -1,6 +1,6 @@
 ---
 - name: download terraform
-  get_url: url=https://dl.bintray.com/mitchellh/terraform/terraform_{{ terraform_version }}_linux_amd64.zip dest=/home/{{ ansible_ssh_user }}/terraform.zip
+  get_url: url=https://releases.hashicorp.com/terraform/{{ terraform_version }}/terraform_{{ terraform_version }}_linux_amd64.zip  dest=/home/{{ ansible_ssh_user }}/terraform.zip
 
 - name: extract terraform
   sudo: yes
