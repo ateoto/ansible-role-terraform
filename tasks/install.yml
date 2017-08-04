@@ -3,7 +3,7 @@
   get_url: url=https://releases.hashicorp.com/terraform/{{ terraform_version }}/terraform_{{ terraform_version }}_linux_amd64.zip  dest=/home/{{ ansible_ssh_user }}/terraform.zip
 
 - name: extract terraform
-  sudo: yes
+  become: yes
   unarchive: src=/home/{{ ansible_ssh_user }}/terraform.zip dest=/usr/local/bin copy=no
   # Ansible 2.0 would let us do this in one step.
 
